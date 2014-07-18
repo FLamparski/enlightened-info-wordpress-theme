@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>The Enlightened.</title>
 
     <!-- Bootstrap -->
-    <link href="css/enl.css" rel="stylesheet">
+    <link href="css/enl.prefixes.css" media="screen, projection" type="text/css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,11 +17,53 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div id="headerbar">
+        <div class="container">
+            <div class="col-xs-11 col-sm-4">
+                <a href="#" class="minilogo">The Enlightened</a>
+            </div>
+            <div class="col-xs-1 col-sm-8">
+                <div class="pull-right">
+                    <nav class="stuff">
+                        <ul>
+                            <li class="more-important">
+                                <a href="/" class="textlink">
+                                    home
+                                </a>
+                            </li>
+                            <li class="most-important">
+                                <a href="/info" class="textlink">
+                                    wiki
+                                </a>
+                            </li>
+                            <li class="less-important">
+                                <a href="/info/visitors" class="textlink">
+                                    visitors
+                                </a>
+                            </li>
+                            <li class="less-important">
+                                <a href="http://uk-communities.the-enlightened.info" class="textlink">
+                                    communities
+                                </a>
+                            </li>
+                            <li class="most-important overflow-menu">
+                                <a href="#" id="headerbarOverflow" data-toggle="dropdown" class="imglink">
+                                    <img src="img/overflow_menu.png" />
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="headerbarOverflow">
+                                    <li><a href="#">Enlintel</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> <!-- pull-right -->
+            </div> <!-- col-xs-1 ... -->
+        </div> <!-- container -->
+    </div> <!-- #headerbar -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="dist/enlinfo.js"></script>
   </body>
 </html>

@@ -1,3 +1,107 @@
 @import 'bootstrap/bootstrap.less';
 @import 'font-awesome/font-awesome.less';
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Julius+Sans+One);
 
+@brand-primary: #28F428;
+@brand-info: #FECE5A;
+@brand-success: #8CFFC2;
+@brand-warning: #FF7315;
+@brand-danger: #E40000;
+
+@resistance: #00C2FF;
+
+@body-bg: #202020;
+@text-color: #E8E8E8;
+
+@font-family-sans-serif: Lato, 'Helvetica Neue', Tahoma, sans-serif;
+@font-size-base: 16px;
+@headings-font-family: 'Julius Sans One', @font-family-sans-serif;
+
+body {
+    background: url('../img/green-southbank.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#headerbar {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    z-index: 100;
+    #gradient > .vertical(rgba(0, 0, 0, 0.7); rgba(0, 0, 0, 0, 0.0));
+    font-family: @headings-font-family;
+
+    a:visited,
+    a:link {
+        transition: 0.3s;
+    }
+
+    a:hover,
+    a:active {
+        transition: 0.1s;
+    }
+    
+    a.minilogo {
+        font-weight: 400;
+        font-size: 34px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        line-height: 40px;
+        display: block;
+        &:link,
+        &:visited {
+            color: lighten(@text-color, 20%);
+        }
+        &:hover,
+        &:active {
+            text-decoration: none;
+            text-shadow: 0px 0px 20px #fff;
+        }
+    }
+
+    nav.stuff > ul {
+        list-style: none;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        > li {
+            display: block;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 20px;
+            
+            float: left;
+            height: 100%;
+            position: relative;
+            > a.textlink {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 30px 12px 20px;
+                color: #fff;
+                &:hover,
+                &:active {
+                    text-decoration: none;
+                    text-shadow: 0px 0px 20px #fff;
+                }
+            }
+            > a.imglink {
+                display: block;
+                width: 100%;
+                height: 70px;
+                padding: 22px 12px 14px;
+                &:hover,
+                &:active {
+                    box-shadow: inset 0px 0px 20px #fff;
+                }
+            }
+            ul {
+                font-family: @font-family-sans-serif;
+            }
+        }
+    }
+}
