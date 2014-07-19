@@ -186,3 +186,79 @@ body {
         text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
     }
 }
+
+.container {
+    padding-top: 80px;
+}
+
+.title-area {
+    .make-xs-column(12);
+    img {
+        height: 120px;
+        margin-top: 10px;
+        .pull-right();
+    }
+    .title {
+        margin-right: 120px;
+        margin-bottom: 20px;
+        text-align: right;
+        padding: 1.5rem;
+    }
+}
+
+.make-card(@bg, @fg, @shadow){
+    background-color: @bg;
+    color: @fg;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px @shadow;
+    padding: 1.5rem;
+}
+
+.card > header {
+    border-bottom: 1px solid #ccc;
+    margin: 0px -1.5rem 10px;
+    padding: 0px 1.5rem;
+    h1, h2, h3 {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+    h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.card > footer {
+    margin-top: 10px;
+}
+
+.main-content {
+    .make-xs-column(12);
+    .make-sm-column(8);
+    .make-lg-column(9);
+
+    .card {
+        .make-card(#fff, @body-bg, #aaa);
+        margin-bottom: 20px;
+
+        .muted {
+            color: lighten(@body-bg, 10%);
+        }
+    }
+}
+
+.sidebar {
+    .make-xs-column(12);
+    .make-sm-column(4);
+    .make-lg-column(3);
+    .pull-right();
+
+    .card {
+        .make-card(fade(@body-bg, 80%), @text-color, #333);
+        margin-bottom: 20px;
+
+        .muted {
+            color: darken(@text-color, 10%);
+        }
+    }
+}
