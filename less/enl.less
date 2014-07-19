@@ -13,6 +13,11 @@
 @body-bg: #202020;
 @text-color: #E8E8E8;
 
+@dropdown-bg: fade(@body-bg, 75%);
+@dropdown-link-color: @gray-lighter;
+@dropdown-link-hover-color: @text-color;
+@dropdown-link-hover-bg: fade(@body-bg, 80%);
+
 @font-family-sans-serif: Lato, 'Helvetica Neue', Tahoma, sans-serif;
 @font-size-base: 16px;
 @headings-font-family: 'Julius Sans One', @font-family-sans-serif;
@@ -45,8 +50,25 @@ body {
         font-size: 34px;
         margin-top: 20px;
         margin-bottom: 10px;
-        line-height: 40px;
+        line-height: 34px;
         display: block;
+
+        @media(max-width: @screen-xs){
+            font-size: 20px;
+            line-height: 20px;
+            margin-top: 70px - 20px - 10px;
+        }
+        @media(max-width: @screen-sm){
+            font-size: 28px;
+            line-height: 28px;
+            margin-top: 70px - 28px - 10px;
+        }
+        @media(max-width: @screen-md){
+            font-size: 30px;
+            line-height: 30px;
+            margin-top: 70px - 35px - 10px;
+        }
+        
         &:link,
         &:visited {
             color: lighten(@text-color, 20%);
@@ -77,6 +99,16 @@ body {
             float: left;
             height: 100%;
             position: relative;
+
+            @media(max-width: @screen-xs){
+                font-size: 14px;
+                line-height: 14px;
+            }
+            @media(max-width: @screen-sm){
+                font-size: 16px;
+                line-height: 16px;
+            }
+
             > a.textlink {
                 display: block;
                 width: 100%;
@@ -103,5 +135,54 @@ body {
                 font-family: @font-family-sans-serif;
             }
         }
+    }
+}
+
+.sitemenu {
+
+    > .more-important {
+        .hidden-xs();
+    }
+
+    > .less-important {
+        .hidden-xs();
+        .hidden-sm();
+    }
+
+    .dropdown-menu {
+        left: -100px;
+        > .more-important {
+            .visible-xs();
+        }
+
+        > .less-important {
+            .visible-xs();
+            .visible-sm();
+        }
+    }
+}
+
+.enl-landing {
+    padding-top: 100px;
+    .center-block();
+    text-align: center;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+
+    .enlogo {
+        width: 128px;
+        .center-block();
+        .img-responsive();
+    }
+}
+
+.btn-transparent {
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: @headings-font-family;
+    font-size: 16px;
+
+    &:hover {
+        color: #fff;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
     }
 }

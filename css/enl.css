@@ -3171,7 +3171,7 @@ tbody.collapse.in {
   list-style: none;
   font-size: 16px;
   text-align: left;
-  background-color: #ffffff;
+  background-color: rgba(32, 32, 32, 0.75);
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -3195,14 +3195,14 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333333;
+  color: #eeeeee;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #262626;
-  background-color: #f5f5f5;
+  color: #e8e8e8;
+  background-color: rgba(32, 32, 32, 0.8);
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -7804,8 +7804,29 @@ body {
   font-size: 34px;
   margin-top: 20px;
   margin-bottom: 10px;
-  line-height: 40px;
+  line-height: 34px;
   display: block;
+}
+@media (max-width: 480px) {
+  #headerbar a.minilogo {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  #headerbar a.minilogo {
+    font-size: 28px;
+    line-height: 28px;
+    margin-top: 32px;
+  }
+}
+@media (max-width: 992px) {
+  #headerbar a.minilogo {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 25px;
+  }
 }
 #headerbar a.minilogo:link,
 #headerbar a.minilogo:visited {
@@ -7835,6 +7856,18 @@ body {
   height: 100%;
   position: relative;
 }
+@media (max-width: 480px) {
+  #headerbar nav.stuff > ul > li {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 768px) {
+  #headerbar nav.stuff > ul > li {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
 #headerbar nav.stuff > ul > li > a.textlink {
   display: block;
   width: 100%;
@@ -7859,4 +7892,99 @@ body {
 }
 #headerbar nav.stuff > ul > li ul {
   font-family: Lato, 'Helvetica Neue', Tahoma, sans-serif;
+}
+@media (max-width: 767px) {
+  .sitemenu > .more-important {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .sitemenu > .less-important {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .sitemenu > .less-important {
+    display: none !important;
+  }
+}
+.sitemenu .dropdown-menu {
+  left: -100px;
+}
+.sitemenu .dropdown-menu > .more-important {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .sitemenu .dropdown-menu > .more-important {
+    display: block !important;
+  }
+  table.sitemenu .dropdown-menu > .more-important {
+    display: table;
+  }
+  tr.sitemenu .dropdown-menu > .more-important {
+    display: table-row !important;
+  }
+  th.sitemenu .dropdown-menu > .more-important,
+  td.sitemenu .dropdown-menu > .more-important {
+    display: table-cell !important;
+  }
+}
+.sitemenu .dropdown-menu > .less-important {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .sitemenu .dropdown-menu > .less-important {
+    display: block !important;
+  }
+  table.sitemenu .dropdown-menu > .less-important {
+    display: table;
+  }
+  tr.sitemenu .dropdown-menu > .less-important {
+    display: table-row !important;
+  }
+  th.sitemenu .dropdown-menu > .less-important,
+  td.sitemenu .dropdown-menu > .less-important {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .sitemenu .dropdown-menu > .less-important {
+    display: block !important;
+  }
+  table.sitemenu .dropdown-menu > .less-important {
+    display: table;
+  }
+  tr.sitemenu .dropdown-menu > .less-important {
+    display: table-row !important;
+  }
+  th.sitemenu .dropdown-menu > .less-important,
+  td.sitemenu .dropdown-menu > .less-important {
+    display: table-cell !important;
+  }
+}
+.enl-landing {
+  padding-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.enl-landing .enlogo {
+  width: 128px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.btn-transparent {
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'Julius Sans One', Lato, 'Helvetica Neue', Tahoma, sans-serif;
+  font-size: 16px;
+}
+.btn-transparent:hover {
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }

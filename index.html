@@ -18,14 +18,17 @@
   </head>
   <body>
     <div id="headerbar">
-        <div class="container">
-            <div class="col-xs-11 col-sm-4">
+        <div class="container-fluid">
+            <div class="hidden-xs col-sm-7 col-md-5">
                 <a href="#" class="minilogo">The Enlightened</a>
             </div>
-            <div class="col-xs-1 col-sm-8">
+            <div class="visible-xs col-xs-2">
+                <a href="#" class="minilogo">enl</a>
+            </div>
+            <div class="col-xs-10 col-sm-5 col-md-7">
                 <div class="pull-right">
                     <nav class="stuff">
-                        <ul>
+                        <ul class="sitemenu">
                             <li class="more-important">
                                 <a href="/" class="textlink">
                                     home
@@ -51,7 +54,22 @@
                                     <img src="img/overflow_menu.png" />
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="headerbarOverflow">
-                                    <li><a href="#">Enlintel</a></li>
+                                <li class="more-important">
+                                    <a href="/" class="textlink">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="less-important">
+                                    <a href="/info/visitors" class="textlink">
+                                        Visitors
+                                    </a>
+                                </li>
+                                <li class="less-important">
+                                    <a href="http://uk-communities.the-enlightened.info" class="textlink">
+                                        Communities
+                                    </a>
+                                </li>
+                                    <li><a href="#">G+ Community</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -60,6 +78,13 @@
             </div> <!-- col-xs-1 ... -->
         </div> <!-- container -->
     </div> <!-- #headerbar -->
+
+    <div class="enl-landing">
+        <img src="img/enlogo.svg" class="enlogo" />
+        <h1>We are the Enlightened</h1>
+        <p class="lead">Advancing Humanity</p>
+        <a class="btn btn-lg btn-transparent" href="#">Join Us &raquo;</a>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
